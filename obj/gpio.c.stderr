@@ -1,0 +1,18 @@
+/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/generated/src/gpio.c: In function 'MX_GPIO_Init':
+/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/generated/src/gpio.c:145:31: error: 'GPIO_AF12_FMC' undeclared (first use in this function); did you mean 'GPIO_AF12_FSMC'?
+  145 |   GPIO_InitStruct.Alternate = GPIO_AF12_FMC;
+      |                               ^~~~~~~~~~~~~
+      |                               GPIO_AF12_FSMC
+/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/generated/src/gpio.c:145:31: note: each undeclared identifier is reported only once for each function it appears in
+/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/generated/src/gpio.c:153:31: error: 'GPIO_AF5_SPI5' undeclared (first use in this function); did you mean 'GPIO_AF5_SPI1'?
+  153 |   GPIO_InitStruct.Alternate = GPIO_AF5_SPI5;
+      |                               ^~~~~~~~~~~~~
+      |                               GPIO_AF5_SPI1
+/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/generated/src/gpio.c:161:31: error: 'GPIO_AF14_LTDC' undeclared (first use in this function); did you mean 'GPIO_AF1_LPTIM'?
+  161 |   GPIO_InitStruct.Alternate = GPIO_AF14_LTDC;
+      |                               ^~~~~~~~~~~~~~
+      |                               GPIO_AF1_LPTIM
+/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/generated/src/gpio.c:213:31: error: 'GPIO_AF9_LTDC' undeclared (first use in this function); did you mean 'GPIO_AF9_CAN1'?
+  213 |   GPIO_InitStruct.Alternate = GPIO_AF9_LTDC;
+      |                               ^~~~~~~~~~~~~
+      |                               GPIO_AF9_CAN1

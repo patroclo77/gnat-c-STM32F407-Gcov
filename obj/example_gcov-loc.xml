@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project >
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/example_gcov.gpr</vfs_project>
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/example/main.c</vfs_file>
+    </file_marker>
+    <file_marker column=" 17" line=" 25" >
+      <vfs_project>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/example_gcov.gpr</vfs_project>
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/example/main.c</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/example_gcov.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/stm32f429disco.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 88" line=" 32" >
+      <vfs_project />
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/stm32f429disco.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 35" line=" 16" >
+      <vfs_project />
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/example_gcov.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 3" line=" 17" >
+      <vfs_project>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/example_gcov.gpr</vfs_project>
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/example/main.c</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/ld/common-ROM.ld</vfs_file>
+    </file_marker>
+    <file_marker column=" 3" line=" 24" >
+      <vfs_project>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/example_gcov.gpr</vfs_project>
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/example/main.c</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/stm32f429/board.c</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/example_gcov.gpr</vfs_project>
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/example/main.c</vfs_file>
+    </file_marker>
+    <file_marker column=" 3" line=" 24" >
+      <vfs_project>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/example_gcov.gpr</vfs_project>
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/example/main.c</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/generated/CMSIS/STM32F4xx/stm32f429xx.h</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/stm32f429/vector.s</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/stm32-common/newlib.c</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 83" >
+      <vfs_project />
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/stm32-common/newlib.c</vfs_file>
+    </file_marker>
+    <file_marker column=" 3" line=" 17" >
+      <vfs_project>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/example_gcov.gpr</vfs_project>
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/example/main.c</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 35" >
+      <vfs_project />
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/stm32f429disco.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 29" line=" 13" >
+      <vfs_project />
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/example_gcov.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 39" line=" 28" >
+      <vfs_project />
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/example_gcov.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 24" line=" 1" >
+      <vfs_project />
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/stm32f429disco.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/generated/CMSIS/STM32F4xx/stm32f4xx.h</vfs_file>
+    </file_marker>
+    <file_marker column=" 5" line=" 83" >
+      <vfs_project />
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/generated/CMSIS/STM32F4xx/stm32f4xx.h</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/generated/CMSIS/STM32F4xx/system_stm32f4xx.h</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/generated/CMSIS/STM32F4xx/stm32f4xx.h</vfs_file>
+    </file_marker>
+    <file_marker column=" 24" line=" 33" >
+      <vfs_project />
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/stm32f429disco.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 24" line=" 1" >
+      <vfs_project />
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/stm32f429disco.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/generated/src/gpio.c</vfs_file>
+    </file_marker>
+    <file_marker column=" 39" line=" 28" >
+      <vfs_project />
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/example_gcov.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/stm32f407disco.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/example_gcov.gpr</vfs_project>
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/example/main.c</vfs_file>
+    </file_marker>
+    <file_marker column=" 3" line=" 17" >
+      <vfs_project>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/example_gcov.gpr</vfs_project>
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/example/main.c</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 1" >
+      <vfs_project />
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/example_gcov.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 19" >
+      <vfs_project />
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/stm32f407disco.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 44" line=" 13" >
+      <vfs_project />
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/example_gcov.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 23" line=" 19" >
+      <vfs_project />
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/stm32f407disco.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 24" >
+      <vfs_project />
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/stm32f407disco.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 18" line=" 20" >
+      <vfs_project />
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/stm32f407disco.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/stm32f407disco.gpr</vfs_project>
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/generated/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 10" line=" 29" >
+      <vfs_project>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/stm32f407disco.gpr</vfs_project>
+      <vfs_file>/opt/GNAT/2021-arm-elf/share/examples/gnat-c/stm32f4_gcov/generated/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

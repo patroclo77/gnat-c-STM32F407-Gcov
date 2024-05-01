@@ -1,0 +1,55 @@
+project STM32F407Disco is
+
+   type Loader_Type is ("ROM", "RAM");
+   Loader : Loader_Type := external ("LOADER", "ROM");
+
+   type Build_Type is ("Debug", "Production");
+   Build   : Build_Type := external ("BUILD", "Production");
+
+   for Target use "arm-eabi";
+   for Languages use ("C", "Asm");
+
+   for Library_Name use "gnat_crt0";
+   for Object_Dir use "obj";
+   for Library_Dir use "lib";
+
+   for Source_Dirs use
+     ("stm32f407",
+      "generated/inc",
+      "generated/src",
+      "generated/STM32F4xx_HAL_Driver/Inc",
+      "generated/STM32F4xx_HAL_Driver/Src",
+      "generated/CMSIS/Include",
+      "generated/CMSIS/Device",
+      "generated/CMSIS/Device/ST/STM32F4xx/Include",
+      "generated/CMSIS/Device/ST/STM32F4xx/Source");
+
+   Common_Switches :=
+     ("-mlittle-endian", "-mfloat-abi=hard",
+      "-mcpu=cortex-m4", "-mfpu=fpv4-sp-d16",
+      "-mthumb");
+
+   package Compiler is
+      for Switches ("C") use Common_Switches &
+        ("-ffunction-sections", "-fdata-sections", "-ftest-coverage", "-fprofile-arcs",
+         "-DSTM32F407xx", "-DUSE_HAL_DRIVER");
+      case Build is
+         when "Debug" =>
+            for Switches ("C") use Compiler'Switches ("C") &
+              ("-g", "-O0");
+            for Switches ("Asm") use --Compiler'Switches ("Asm") &
+               ("-g", "-march= ");
+         when "Production" =>
+            for Switches ("C") use Compiler'Switches ("C") &
+              ("-O2");
+      end case;
+   end Compiler;
+
+   Linker_Switches := Common_Switches &
+     ("-Wl,-T," & Project'Project_Dir & "ld/STM32F407VGTX_FLASH.ld",
+      "-L" & Project'Project_Dir & "lib",
+      "-Wl,--gc-sections", "-nostartfiles",
+      "-lc", "-Wl,--whole-archive", "-lada_crt", "-Wl,--no-whole-archive",
+      "-Wl,-z,muldefs");
+
+end STM32F407Disco;
