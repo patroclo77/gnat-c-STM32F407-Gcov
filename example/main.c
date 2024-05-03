@@ -18,7 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-
+#include "gcov_public.h"
 
 //#define TEST_SEMIHOSTING
 #ifdef TEST_SEMIHOSTING
@@ -109,7 +109,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   printf("*-*-*-*-*-* BEGIN GCOV EXIT\n");
 
-  __gcov_dump();
+  __gcov_exit();
 
   printf("*-*-*-*-*-* END GCOV EXIT\n");
 
