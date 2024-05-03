@@ -21,8 +21,8 @@ project STM32F407Disco is
       "generated/STM32F4xx_HAL_Driver/Src",
       "generated/CMSIS/Include",
       "generated/CMSIS/Device",
-      "generated/CMSIS/Device/ST/STM32F4xx/Include",
-      "generated/CMSIS/Device/ST/STM32F4xx/Source");
+      "generated/CMSIS/Device/ST/STM32F4xx/Include"
+       );
 
    Common_Switches :=
      ("-mlittle-endian", "-mfloat-abi=hard",
@@ -37,8 +37,8 @@ project STM32F407Disco is
          when "Debug" =>
             for Switches ("C") use Compiler'Switches ("C") &
               ("-g", "-O0");
-            for Switches ("Asm") use --Compiler'Switches ("Asm") &
-               ("-g", "-march= ");
+            for Switches ("Asm") use Compiler'Switches ("Asm") &
+               ("-g");
          when "Production" =>
             for Switches ("C") use Compiler'Switches ("C") &
               ("-O2");

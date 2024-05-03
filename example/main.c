@@ -20,7 +20,7 @@
 #include "main.h"
 
 
-//#define TEST_SEMIHOSTING
+#define TEST_SEMIHOSTING
 #ifdef TEST_SEMIHOSTING
    #include <stdio.h>
 #endif
@@ -73,7 +73,7 @@ int main(void)
   /* USER CODE BEGIN 1 */
 #ifdef TEST_SEMIHOSTING
     printf("Opening a File!\n");
-    FILE * fp = fopen("/home/samueljg/STM32F407_Gcov.txt", "w");
+    FILE * fp = fopen("/home/samueljg/Example_C_GNAT.txt", "w");
 
     if (fp < 0)
     {
@@ -82,7 +82,7 @@ int main(void)
     }
 
     printf("Writing in file\n");
-    fprintf(fp,"NEW integrating gcov. You will make it!\n");
+    fprintf(fp,"gnatstudio using C!\n");
     fclose(fp);
     printf("Message written in file\n");
 #endif
@@ -107,7 +107,12 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
+  printf("*-*-*-*-*-* BEGIN GCOV EXIT\n");
+
   __gcov_exit();
+
+  printf("*-*-*-*-*-* END GCOV EXIT\n");
+
   /* USER CODE END 2 */
 
   /* Infinite loop */

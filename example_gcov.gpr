@@ -18,14 +18,16 @@ project Example_Gcov is
 
    STM32_Semihosting_Switches := ( "-specs=/opt/st/stm32cubeide_1.15.0_3/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/lib/thumb/v7e-m+fp/hard/rdimon.specs"
                                   ,"-specs=/opt/st/stm32cubeide_1.15.0_3/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/lib/thumb/v7e-m+fp/hard/nano.specs"
-                                  ,"-L/home/samueljg/Downloads/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard"
+                                  --,"-L/home/samueljg/Downloads/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard"
+                                  ,"-L/opt/st/stm32cubeide_1.15.0_3/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/"
+                                  -- ,"-L/opt/st/stm32cubeide_1.15.0_3/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/lib/thumb/v7e-m+fp/hard"
                                   ,"-L/home/samueljg/Downloads/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7e-m+fp/hard"
                                   ,"-lrdimon"
-                                  ,"-lgcov"
+                                  --,"-lgcov"
                                  );
 
    package Linker is
-      for Switches ("C") use STM32F407Disco.Linker_Switches & STM32_Semihosting_Switches;
+      for Switches ("C") use ("-ftest-coverage","-fprofile-arcs") & STM32F407Disco.Linker_Switches & STM32_Semihosting_Switches;
    end Linker;
 
 end Example_Gcov;
