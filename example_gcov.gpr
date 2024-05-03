@@ -16,17 +16,13 @@ project Example_Gcov is
       for Switches ("C") use ("-s");
    end Builder;
 
-   STM32_Semihosting_Switches := ( "-specs=/home/samueljg/Downloads/gcc-arm-none-eabi-7-2018-q2-update/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/rdimon.specs"
-                                  ,"-specs=/home/samueljg/Downloads/gcc-arm-none-eabi-7-2018-q2-update/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/nano.specs"
-                                  ,"-L/home/samueljg/Downloads/gcc-arm-none-eabi-7-2018-q2-update/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard" --rdimon
-                                  --,"-L/home/samueljg/Downloads/gcc-arm-none-eabi-7-2018-q2-update/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard"
-                                  ,"-lrdimon"
-                                  --,"-lgcov"
-                                   --,"-L/opt/GNAT/2018-arm-elf/lib/gcc/arm-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard"
-                                   --,"-lgcov"
-                                   ,"-L/home/samueljg/Downloads/gcc-arm-none-eabi-7-2018-q2-update/lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard"
+   STM32_Semihosting_Switches := ( "-specs=/home/samueljg/Downloads/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7e-m+fp/hard/rdimon.specs"
+                                  ,"-specs=/home/samueljg/Downloads/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7e-m+fp/hard/nano.specs"
+                                  ,"-L/home/samueljg/Downloads/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard" --rdimon
+                                  ,"-L/home/samueljg/Downloads/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7e-m+fp/hard"
+                                   ,"-lrdimon"
                                    ,"-lgcov"
-                                 );
+                                   );
 
     --/home/samueljg/Downloads/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard
     --/home/samueljg/Downloads/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7e-m+fp/hard

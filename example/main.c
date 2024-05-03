@@ -20,7 +20,7 @@
 #include "main.h"
 
 
-#define TEST_SEMIHOSTING
+//#define TEST_SEMIHOSTING
 #ifdef TEST_SEMIHOSTING
    #include <stdio.h>
 #endif
@@ -109,7 +109,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   printf("*-*-*-*-*-* BEGIN GCOV EXIT\n");
 
-  __gcov_exit();
+  __gcov_dump();
 
   printf("*-*-*-*-*-* END GCOV EXIT\n");
 
