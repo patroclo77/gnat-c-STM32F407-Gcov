@@ -2,112 +2,13 @@
 <Locations >
   <Project>
     <vfs_file />
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example_gcov.gpr</vfs_project>
-      <vfs_file>/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example/main.c</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project />
-      <vfs_file>/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example_gcov.gpr</vfs_file>
-    </file_marker>
-    <file_marker column=" 46" line=" 23" >
-      <vfs_project />
-      <vfs_file>/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example_gcov.gpr</vfs_file>
-    </file_marker>
     <file_marker column=" 3" line=" 72" >
       <vfs_project>/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example_gcov.gpr</vfs_project>
       <vfs_file>/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example/main.c</vfs_file>
     </file_marker>
-    <file_marker column=" 46" line=" 23" >
+    <file_marker current="true" column=" 24" line=" 3" >
       <vfs_project />
       <vfs_file>/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example_gcov.gpr</vfs_file>
-    </file_marker>
-    <file_marker column=" 3" line=" 72" >
-      <vfs_project>/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example_gcov.gpr</vfs_project>
-      <vfs_file>/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example/main.c</vfs_file>
-    </file_marker>
-    <file_marker column=" 15" line=" 29" >
-      <vfs_project />
-      <vfs_file>/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example_gcov.gpr</vfs_file>
-    </file_marker>
-    <file_marker column=" 3" line=" 72" >
-      <vfs_project>/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example_gcov.gpr</vfs_project>
-      <vfs_file>/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example/main.c</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example_gcov.gpr</vfs_project>
-      <vfs_file>/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example/main.c</vfs_file>
-    </file_marker>
-    <file_marker column=" 35" line=" 21" >
-      <vfs_project />
-      <vfs_file>/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example_gcov.gpr</vfs_file>
-    </file_marker>
-    <file_marker column=" 3" line=" 72" >
-      <vfs_project>/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example_gcov.gpr</vfs_project>
-      <vfs_file>/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example/main.c</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 110" >
-      <vfs_project>/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example_gcov.gpr</vfs_project>
-      <vfs_file>/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example/main.c</vfs_file>
-    </file_marker>
-    <file_marker current="true" column=" 3" line=" 72" >
-      <vfs_project>/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example_gcov.gpr</vfs_project>
-      <vfs_file>/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example/main.c</vfs_file>
-    </file_marker>
-  </Project>
-  <Project >
-    <vfs_file >/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example_gcov.gpr</vfs_file>
-    <file_marker column=" 1" line=" 1">
-      <vfs_project >/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example_gcov.gpr</vfs_project>
-      <vfs_file >/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example/main.c</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1">
-      <vfs_project  />
-      <vfs_file >/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example_gcov.gpr</vfs_file>
-    </file_marker>
-    <file_marker column=" 133" line=" 23">
-      <vfs_project  />
-      <vfs_file >/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example_gcov.gpr</vfs_file>
-    </file_marker>
-    <file_marker column=" 3" line=" 72">
-      <vfs_project >/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example_gcov.gpr</vfs_project>
-      <vfs_file >/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example/main.c</vfs_file>
-    </file_marker>
-    <file_marker column=" 133" line=" 23">
-      <vfs_project  />
-      <vfs_file >/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example_gcov.gpr</vfs_file>
-    </file_marker>
-    <file_marker column=" 3" line=" 72">
-      <vfs_project >/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example_gcov.gpr</vfs_project>
-      <vfs_file >/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example/main.c</vfs_file>
-    </file_marker>
-    <file_marker column=" 68" line=" 29">
-      <vfs_project  />
-      <vfs_file >/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example_gcov.gpr</vfs_file>
-    </file_marker>
-    <file_marker column=" 3" line=" 72">
-      <vfs_project >/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example_gcov.gpr</vfs_project>
-      <vfs_file >/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example/main.c</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1">
-      <vfs_project >/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example_gcov.gpr</vfs_project>
-      <vfs_file >/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example/main.c</vfs_file>
-    </file_marker>
-    <file_marker column=" 35" line=" 21">
-      <vfs_project  />
-      <vfs_file >/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example_gcov.gpr</vfs_file>
-    </file_marker>
-    <file_marker column=" 3" line=" 72">
-      <vfs_project >/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example_gcov.gpr</vfs_project>
-      <vfs_file >/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example/main.c</vfs_file>
-    </file_marker>
-    <file_marker column=" 14" line=" 110">
-      <vfs_project >/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example_gcov.gpr</vfs_project>
-      <vfs_file >/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example/main.c</vfs_file>
-    </file_marker>
-    <file_marker current="true" column=" 3" line=" 72">
-      <vfs_project >/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example_gcov.gpr</vfs_project>
-      <vfs_file >/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/example/main.c</vfs_file>
     </file_marker>
   </Project>
 </Locations>

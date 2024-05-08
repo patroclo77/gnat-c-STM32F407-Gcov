@@ -81,7 +81,7 @@ int main(void)
 	exit(1);
     }
 
-    printf("Writing in file\n");
+    printf("Driting in file\n");
     fprintf(fp,"gnatstudio using C!\n");
     fclose(fp);
     printf("Message written in file\n");

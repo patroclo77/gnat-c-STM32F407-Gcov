@@ -4,7 +4,7 @@ project STM32F407Disco is
    Loader : Loader_Type := external ("LOADER", "ROM");
 
    type Build_Type is ("Debug", "Production");
-   Build   : Build_Type := external ("BUILD", "Production");
+   Build   : Build_Type := external ("BUILD", "Debug");
 
    for Target use "arm-eabi";
    for Languages use ("C", "Asm");
@@ -21,7 +21,8 @@ project STM32F407Disco is
       "generated/STM32F4xx_HAL_Driver/Src",
       "generated/CMSIS/Include",
       "generated/CMSIS/Device",
-      "generated/CMSIS/Device/ST/STM32F4xx/Include"
+      "generated/CMSIS/Device/ST/STM32F4xx/Include",
+      "gcov_c"
        );
 
    Common_Switches :=
@@ -29,10 +30,13 @@ project STM32F407Disco is
       "-mcpu=cortex-m4", "-mfpu=fpv4-sp-d16",
       "-mthumb");
 
+   Target_Switches := ("-ffunction-sections", "-fdata-sections",
+         "-DSTM32F407xx", "-DUSE_HAL_DRIVER", "-g3");
+
    package Compiler is
-      for Switches ("C") use Common_Switches &
-        ("-ffunction-sections", "-fdata-sections", "-ftest-coverage", "-fprofile-arcs",
-         "-DSTM32F407xx", "-DUSE_HAL_DRIVER");
+
+      for Switches ("C") use Common_Switches & Target_Switches;
+
       case Build is
          when "Debug" =>
             for Switches ("C") use Compiler'Switches ("C") &

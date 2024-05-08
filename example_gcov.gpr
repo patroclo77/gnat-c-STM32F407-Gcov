@@ -8,15 +8,17 @@ project Example_Gcov is
    for Object_Dir use "obj";
    for Main use ("main.c");
 
-   for Source_Dirs use ("example", "gcov_c");
+   for Source_Dirs use ("example");
 
-   package Compiler renames STM32F407disco.Compiler;
+   package Compiler extends STM32F407disco.Compiler is
+      for switches ("C") use STM32F407disco.Common_Switches & STM32F407disco.Target_Switches & ("-fprofile-arcs", "-ftest-coverage", "-fprofile-abs-path");
+   end Compiler;
 
    package Builder is
       for Switches ("C") use ("-s");
    end Builder;
 
-   STM32_Semihosting_Switches := ("-specs=/home/samueljg/Downloads/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7e-m+fp/hard/rdimon.specs"
+   STM32_Semihosting_Switches := ( "-specs=/home/samueljg/Downloads/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7e-m+fp/hard/rdimon.specs"
                                   ,"-specs=/home/samueljg/Downloads/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7e-m+fp/hard/nano.specs"
                                   ,"-L/home/samueljg/Downloads/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard" --rdimon
                                   ,"-L/home/samueljg/Downloads/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7e-m+fp/hard"
