@@ -72,7 +72,7 @@ int main(void)
   initialise_monitor_handles(); //Required for semihosting
   /* USER CODE BEGIN 1 */
 
-   char * path = "/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/obj/main.gcda";
+   char * path = "/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/obj/vivi.gcda";
 
 #ifdef TEST_SEMIHOSTING
     printf("Opening a File!\n");
@@ -111,8 +111,7 @@ int main(void)
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
 
-   unsigned char bf;
-    GCOV_FILE_TYPE file;
+   GCOV_FILE_TYPE file;
 
    file = GCOV_OPEN_FILE(GCOV_OUTPUT_BINARY_FILENAME);
 
@@ -122,36 +121,9 @@ int main(void)
       return;
    }
 
-   unsigned i = 0, n = strlen(path);
-
-   fprintf(file, path);
-
-   GCOV_CLOSE_FILE(file);
-
-   printf("___ END TEST ___\n");
-
-   file = GCOV_OPEN_FILE(GCOV_OUTPUT_BINARY_FILENAME);
-
-   if (GCOV_OPEN_ERROR (file))
-   {
-      printf("Error opening the file\n");
-      return;
-   }
-
-   printf("___ Start loop:%n ___\n", n);
-
-  for (i = 0; i < n; ++i)
-  {
-     bf = path[i];
-     GCOV_PRINT_STR(n);
-     (void)GCOV_WRITE_BYTE(file, bf);
-  }
-
-  printf("___ Finish loop ___\n");
-
+  GCOV_WRITE_LONG_STR(file, path);
 
   GCOV_CLOSE_FILE(file);
-  printf("*-*-*-*-*-* BEGIN GCOV EXIT\n");
 
   __gcov_exit();
 
