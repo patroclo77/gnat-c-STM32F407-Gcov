@@ -71,18 +71,21 @@ int main(void)
 
   initialise_monitor_handles(); //Required for semihosting
   /* USER CODE BEGIN 1 */
+
+   char * path = "/home/samueljg/Ada_Projects/gnat-c-STM32F407-Gcov/obj/main.gcda";
+
 #ifdef TEST_SEMIHOSTING
     printf("Opening a File!\n");
     FILE * fp = fopen("/home/samueljg/Example_C_GNAT.txt", "w");
 
     if (fp < 0)
     {
-	printf ("Error at opening the file\n");
-	exit(1);
+	     printf ("Error at opening the file\n");
+	     exit(1);
     }
 
     printf("Driting in file\n");
-    fprintf(fp,"gnatstudio using C!\n");
+    fprintf(fp, path);
     fclose(fp);
     printf("Message written in file\n");
 #endif
@@ -107,6 +110,47 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
+
+   unsigned char bf;
+    GCOV_FILE_TYPE file;
+
+   file = GCOV_OPEN_FILE(GCOV_OUTPUT_BINARY_FILENAME);
+
+   if (GCOV_OPEN_ERROR (file))
+   {
+      printf("Error opening the file\n");
+      return;
+   }
+
+   unsigned i = 0, n = strlen(path);
+
+   fprintf(file, path);
+
+   GCOV_CLOSE_FILE(file);
+
+   printf("___ END TEST ___\n");
+
+   file = GCOV_OPEN_FILE(GCOV_OUTPUT_BINARY_FILENAME);
+
+   if (GCOV_OPEN_ERROR (file))
+   {
+      printf("Error opening the file\n");
+      return;
+   }
+
+   printf("___ Start loop:%n ___\n", n);
+
+  for (i = 0; i < n; ++i)
+  {
+     bf = path[i];
+     GCOV_PRINT_STR(n);
+     (void)GCOV_WRITE_BYTE(file, bf);
+  }
+
+  printf("___ Finish loop ___\n");
+
+
+  GCOV_CLOSE_FILE(file);
   printf("*-*-*-*-*-* BEGIN GCOV EXIT\n");
 
   __gcov_exit();
