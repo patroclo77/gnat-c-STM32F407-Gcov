@@ -51,7 +51,7 @@
  * If defined, you must also provide defs below
  * for GCOV_PRINT_STR and GCOV_PRINT_NUM.
  */
-//#define GCOV_OPT_PRINT_STATUS
+#define GCOV_OPT_PRINT_STATUS
 
 /* Reset watchdog timeout during gcov tree scanning.
  * Might be needed if you enable serial output on a slow port,

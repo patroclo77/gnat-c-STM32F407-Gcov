@@ -111,22 +111,7 @@ int main(void)
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
 
-  /* GCOV_FILE_TYPE file;
-
-   file = GCOV_OPEN_FILE(GCOV_OUTPUT_BINARY_FILENAME);
-
-   if (GCOV_OPEN_ERROR (file))
-   {
-      printf("Error opening the file\n");
-      return;
-   }
-
-  GCOV_WRITE_LONG_STR(file, path);
-
-  GCOV_CLOSE_FILE(file);*/
-  printf("Entering in \n");
-
-  GCOV_PRINT_STR ("gcov_exit *-*-*");
+  /* GCOV_FILE_TYPE file;*/
 
   __gcov_exit();
 

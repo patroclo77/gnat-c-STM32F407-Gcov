@@ -69,6 +69,13 @@
 #define GCOV_COUNTERS			8
 #endif
 
+
+#define GCC_VERSION (__GNUC__ * 10000 \
+                     + __GNUC_MINOR__ * 100 \
+                     + __GNUC_PATCHLEVEL__)
+
+/* Test for GCC > 3.2.0 */
+
 /* Compare to gcc/gcov-io.h */
 
 /*

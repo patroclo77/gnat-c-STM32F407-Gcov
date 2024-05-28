@@ -103,6 +103,9 @@ struct gcov_info {
 	gcov_unsigned_t version;
 	struct gcov_info *next;
 	gcov_unsigned_t stamp;
+#if GCC_VERSION > 100301
+	gcov_unsigned_t checksum;	/* unique object checksum */
+#endif
 	const char *filename;
 	gcov_merge_fn merge[GCOV_COUNTERS];
 	unsigned n_functions;

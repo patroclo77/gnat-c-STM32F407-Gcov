@@ -239,13 +239,12 @@ void print_path (char const * path)
  */
 void __gcov_exit(void)
 {
-   printf("__gcov_exit__"); 
 
    GcovInfo *listptr = gcov_headGcov;
 
     
 #if defined(GCOV_OPT_OUTPUT_BINARY_FILE) || defined(GCOV_OPT_OUTPUT_BINARY_MEMORY)
-   // char const *p;
+    char const *p;
 #endif
 
 #ifdef GCOV_OPT_OUTPUT_BINARY_FILE
@@ -258,10 +257,10 @@ void __gcov_exit(void)
 #endif // GCOV_OPT_OUTPUT_BINARY_MEMORY
 
 #ifdef GCOV_OPT_PRINT_STATUS
-    GCOV_PRINT_STR("*-*-* __gcov_exit *-*-*"); //GCOV_PRINT_STR("\n");
+    GCOV_PRINT_STR("__gcov_exit "); //GCOV_PRINT_STR("\n");
 #endif // GCOV_OPT_PRINT_STATUS
 
-/*#ifdef GCOV_OPT_OUTPUT_BINARY_FILE
+#ifdef GCOV_OPT_OUTPUT_BINARY_FILE
     file = GCOV_OPEN_FILE(GCOV_OUTPUT_BINARY_FILENAME);
     if (GCOV_OPEN_ERROR(file)) {
 #ifdef GCOV_OPT_PRINT_STATUS
@@ -273,21 +272,15 @@ void __gcov_exit(void)
         return;
 #endif // GCOV_OPT_USE_STDLIB
     }
-#endif // GCOV_OPT_OUTPUT_BINARY_FILE*/
+#endif // GCOV_OPT_OUTPUT_BINARY_FILE
  
-    GCOV_PRINT_STR("__inst2__");
-
 
     while (listptr) {
         gcov_unsigned_t *buffer = NULL; // Need buffer to be 32-bit-aligned for type-safe internal usage
         u32 bytesNeeded = 0;
 
-        GCOV_PRINT_STR("__inst.2.1__");
-
         /* Do pretend conversion to see how many bytes are needed */
         bytesNeeded = gcov_convert_to_gcda (NULL, listptr->info);
-
-        GCOV_PRINT_STR("__inst3__");
 
 #ifdef GCOV_OPT_USE_MALLOC
         buffer = malloc(bytesNeeded);
@@ -310,10 +303,8 @@ void __gcov_exit(void)
 #endif // GCOV_OPT_USE_STDLIB
           }
 
-        GCOV_PRINT_STR("__inst4__");
 
-
-        /* Do the real conversion into buffer */
+        /* Dothe real conversion into buffer */
         gcov_convert_to_gcda(buffer, listptr->info);
 
 #if defined(GCOV_OPT_PRINT_STATUS) || defined(GCOV_OPT_OUTPUT_SERIAL_HEXDUMP)
@@ -325,28 +316,16 @@ void __gcov_exit(void)
 #endif
 
 #ifdef GCOV_OPT_OUTPUT_BINARY_FILE
-        /* write the filename 
-        char * p = "my_test";  /*gcov_info_filename(listptr->info);
+        /* write the filename */
+        p = gcov_info_filename(listptr->info);
       
         GCOV_WRITE_LONG_STR(file, p);
-        /*while (p && (*p)) {
+        while (p && (*p)) {
             bf = (*p++);
             (void)GCOV_WRITE_BYTE(file, bf);
         }
         bf = '\0';
         (void)GCOV_WRITE_BYTE(file, bf);
-
-       
-        GCOV_CLOSE_FILE (file); */
-
-        print_path(gcov_info_filename(listptr->info));
-
-
-        GCOV_PRINT_STR("__inst5__");
-
-        file = GCOV_OPEN_FILE(GCOV_OUTPUT_BINARY_FILENAME);
-
-        GCOV_PRINT_STR("__inst6__");
 
         /* write the data byte count */
         /* we don't know endianness, so use division for consistent MSB first */
@@ -359,17 +338,12 @@ void __gcov_exit(void)
         bf = (unsigned char)(bytesNeeded);
         (void)GCOV_WRITE_BYTE(file, bf);
 
-        GCOV_PRINT_STR("__inst7__");
-
-
         /* write the data */
         for (u32 i=0; i<bytesNeeded; i++) {
             bf = (unsigned char)(((unsigned char *)buffer)[i]);
             (void)GCOV_WRITE_BYTE(file, bf);
         }
 #endif // GCOV_OPT_OUTPUT_BINARY_FILE
-
-         GCOV_PRINT_STR("__inst8__");
 
 #ifdef GCOV_OPT_OUTPUT_BINARY_MEMORY
         /* copy the filename */
