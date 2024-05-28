@@ -260,20 +260,7 @@ void __gcov_exit(void)
     GCOV_PRINT_STR("__gcov_exit "); //GCOV_PRINT_STR("\n");
 #endif // GCOV_OPT_PRINT_STATUS
 
-#ifdef GCOV_OPT_OUTPUT_BINARY_FILE
-    file = GCOV_OPEN_FILE(GCOV_OUTPUT_BINARY_FILENAME);
-    if (GCOV_OPEN_ERROR(file)) {
-#ifdef GCOV_OPT_PRINT_STATUS
-        GCOV_PRINT_STR("Unable to open gcov output file!"); GCOV_PRINT_STR("\n");
-#endif // GCOV_OPT_PRINT_STATUS
-#ifdef GCOV_OPT_USE_STDLIB
-        exit(1);
-#else
-        return;
-#endif // GCOV_OPT_USE_STDLIB
-    }
-#endif // GCOV_OPT_OUTPUT_BINARY_FILE
- 
+
 
     while (listptr) {
         gcov_unsigned_t *buffer = NULL; // Need buffer to be 32-bit-aligned for type-safe internal usage
@@ -318,16 +305,32 @@ void __gcov_exit(void)
 #ifdef GCOV_OPT_OUTPUT_BINARY_FILE
         /* write the filename */
         p = gcov_info_filename(listptr->info);
+
+#ifdef GCOV_OPT_OUTPUT_BINARY_FILE
+    file = GCOV_OPEN_FILE(p);
+
+    if (GCOV_OPEN_ERROR(file)) {
+#ifdef GCOV_OPT_PRINT_STATUS
+        GCOV_PRINT_STR("Unable to open gcov output file!"); GCOV_PRINT_STR("\n");
+#endif // GCOV_OPT_PRINT_STATUS
+#ifdef GCOV_OPT_USE_STDLIB
+        exit(1);
+#else
+        return;
+#endif // GCOV_OPT_USE_STDLIB
+    }
+#endif // GCOV_OPT_OUTPUT_BINARY_FILE
+ 
       
-        while (p && (*p)) {
+       /* while (p && (*p)) {
             bf = (*p++);
             (void)GCOV_WRITE_BYTE(file, bf);
         }
         bf = '\0';
-        (void)GCOV_WRITE_BYTE(file, bf);
+        (void)GCOV_WRITE_BYTE(file, bf);*/
 
         /* write the data byte count */
-        /* we don't know endianness, so use division for consistent MSB first */
+        /* we don't know endianness, so use division for consistent MSB first 
         bf = (unsigned char)(bytesNeeded / 16777216);
         (void)GCOV_WRITE_BYTE(file, bf);
         bf = (unsigned char)(bytesNeeded / 65536);
@@ -335,7 +338,7 @@ void __gcov_exit(void)
         bf = (unsigned char)(bytesNeeded / 255);
         (void)GCOV_WRITE_BYTE(file, bf);
         bf = (unsigned char)(bytesNeeded);
-        (void)GCOV_WRITE_BYTE(file, bf);
+        (void)GCOV_WRITE_BYTE(file, bf);*/
 
         /* write the data */
         for (u32 i=0; i<bytesNeeded; i++) {
@@ -384,15 +387,19 @@ void __gcov_exit(void)
  * if you have flash that can be written directly,
  * or the luxury of a filesystem, etc.
  */
+        GCOV_CLOSE_FILE(file);
 
 #ifdef GCOV_OPT_USE_MALLOC
         free(buffer);
 #endif // GCOV_OPT_USE_MALLOC
 
         listptr = listptr->next;
+
+
+
     } /* end while listptr */
 
-    /* Add end marker to output */
+    /* Add end marker to output 
 #ifdef GCOV_OPT_OUTPUT_BINARY_FILE
     bf = 'G';
     (void)GCOV_WRITE_BYTE(file, bf);
@@ -414,7 +421,7 @@ void __gcov_exit(void)
     (void)GCOV_WRITE_BYTE(file, bf);
 
     GCOV_CLOSE_FILE(file);
-#endif // GCOV_OPT_OUTPUT_BINARY_FILE
+#endif // GCOV_OPT_OUTPUT_BINARY_FILE*/
 
 #ifdef GCOV_OPT_OUTPUT_BINARY_MEMORY
     gcov_output_buffer[gcov_output_index++] = 'G';
