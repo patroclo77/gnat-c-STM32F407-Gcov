@@ -123,7 +123,6 @@ extern void *__ctor_end;
 /* Modify this output filename if desired */
 /* Not used if you do not define GCOV_OPT_OUTPUT_BINARY_FILE */
 #define GCOV_OUTPUT_BINARY_FILENAME "/home/samueljg/gcov_trace.bin"
-#define GCOV_TEST_FILE "/home/samueljg/gcov_test.bin"
 
 /* Modify file headers, data type and functions, if needed */
 /* Not used if you do not define GCOV_OPT_OUTPUT_BINARY_FILE */

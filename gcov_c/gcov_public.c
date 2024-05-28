@@ -319,7 +319,6 @@ void __gcov_exit(void)
         /* write the filename */
         p = gcov_info_filename(listptr->info);
       
-        GCOV_WRITE_LONG_STR(file, p);
         while (p && (*p)) {
             bf = (*p++);
             (void)GCOV_WRITE_BYTE(file, bf);

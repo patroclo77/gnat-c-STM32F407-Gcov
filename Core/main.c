@@ -20,7 +20,7 @@
 #include "main.h"
 #include "gcov_public.h"
 
-#define TEST_SEMIHOSTING
+//#define TEST_SEMIHOSTING
 #ifdef TEST_SEMIHOSTING
    #include <stdio.h>
 #endif
@@ -114,8 +114,6 @@ int main(void)
   /* GCOV_FILE_TYPE file;*/
 
   __gcov_exit();
-
-  printf("*-*-*-*-*-* END GCOV EXIT\n");
 
   /* USER CODE END 2 */
 
