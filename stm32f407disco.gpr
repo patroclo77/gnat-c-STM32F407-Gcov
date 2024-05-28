@@ -15,13 +15,21 @@ project STM32F407Disco is
 
    for Source_Dirs use
      ("stm32f407",
-      "generated/inc",
-      "generated/src",
-      "generated/STM32F4xx_HAL_Driver/Inc",
-      "generated/STM32F4xx_HAL_Driver/Src",
-      "generated/CMSIS/Include",
-      "generated/CMSIS/Device",
-      "generated/CMSIS/Device/ST/STM32F4xx/Include",
+      "Core/Inc",
+      "Core/Src",
+      "Drivers/CMSIS/Device/ST/STM32F4xx/Include",
+      "Drivers/CMSIS/Include",
+      "Drivers/STM32F4xx_HAL_Driver/Inc",
+      "Drivers/STM32F4xx_HAL_Driver/Inc/Legacy",
+      "Drivers/STM32F4xx_HAL_Driver/Src",
+
+      --"generated/Inc",
+      --"generated/Src",
+      --"generated/STM32F4xx_HAL_Driver/Inc",
+     -- "generated/STM32F4xx_HAL_Driver/Src",
+      --"generated/CMSIS/Include",
+      --"generated/CMSIS/Device",
+      --"generated/CMSIS/Device/ST/STM32F4xx/Include",
       "gcov_c"
        );
 
@@ -50,7 +58,7 @@ project STM32F407Disco is
    end Compiler;
 
    Linker_Switches := Common_Switches &
-     ("-Wl,-T," & Project'Project_Dir & "ld/STM32F407VGTX_FLASH.ld",
+     ("-Wl,-T," & Project'Project_Dir & "ld/STM32F407VGTX_RAM.ld","-Wl,-Map=\'Example_Gcov.txt\'",
       "-L" & Project'Project_Dir & "lib",
       "-Wl,--gc-sections", "-nostartfiles",
       "-lc", "-Wl,--whole-archive", "-lada_crt", "-Wl,--no-whole-archive",

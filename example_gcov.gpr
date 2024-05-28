@@ -8,7 +8,7 @@ project Example_Gcov is
    for Object_Dir use "obj";
    for Main use ("main.c");
 
-   for Source_Dirs use ("example");
+   for Source_Dirs use ("Core");
 
    package Compiler extends STM32F407disco.Compiler is
       for switches ("C") use STM32F407disco.Common_Switches & STM32F407disco.Target_Switches & ("-fprofile-arcs", "-ftest-coverage", "-fprofile-abs-path");
